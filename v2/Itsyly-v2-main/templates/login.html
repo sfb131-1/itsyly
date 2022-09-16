@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+    </head>
+</head>
+<body>
+    <div class="container">
+        <div class="bluebg"> 
+            <div class="box signin">
+                <img src="{{ url_for('static', filename = 'logo.png') }}">
+                <h2>Already Have an account?</h2>
+                <button class="signinBtn">
+                    SignIn
+                </button>
+                <a href="/">Home</a>
+            </div>
+            <div class="box signin">
+                <img src="{{ url_for('static', filename = 'logo.png') }}">
+                <h2>Don't Have an account?</h2>
+                <button class="signupBtn">
+                    SignUp
+                </button>
+                <a href="/">Home</a>
+            </div>
+
+        </div>
+        <div class="formbx">
+            <div class="form signinForm">
+                <form>
+                <h3>Sign In</h3>
+                <input type="text" name="" placeholder="Username/Number">
+                <input type="Password" name="" placeholder="Password">
+                <input type="submit" value="Login">
+                <a href="#" class="forgot">Forgot password</a></form>
+
+            </div>
+             <div class="form signupForm">
+                <form>
+                <h3>Sign Up</h3>
+                <input type="text" name="" placeholder="Username">
+                <input type="text" name="" placeholder="Number">
+                 <input type="text" name="" placeholder="Email">
+                <input type="Password" name="" placeholder="Password">
+                <input type="submit" value="Register">
+                
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+<script type="text/javascript">
+    const signinBtn = document.querySelector(".signinBtn");
+    const signupBtn = document.querySelector('.signupBtn');
+    const formbx = document.querySelector(".formbx");
+    const body = document.querySelector("body");
+
+
+
+    signupBtn.onclick = function () {
+        /* body... */
+        formbx.classList.add('active')
+        body.classList.add('active')
+    }
+    signinBtn.onclick = function () {
+        /* body... */
+        body.classList.remove('active')
+        formbx.classList.remove('active')
+    }
+    
+    
+</script>
+</html>
