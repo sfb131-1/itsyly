@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Attacks</title>
+
+{% endblock %}
+
+{% block body %}
